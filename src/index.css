@@ -1,0 +1,93 @@
+/* Import Tailwind base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Definitions */
+.dancing-script-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+.pacifico-font {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Global Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Dark Theme Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* Tailwind gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280; /* Tailwind gray-500 */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* Tailwind gray-400 */
+}
+
+/* Utility for 3D Perspective (if used elsewhere) */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Keyframes for gradient animation (if used elsewhere) */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========================== */
+/* Text Glow Effects          */
+/* ========================== */
+
+/* Glow for Gradient Titles - Enhanced Outline */
+.text-glow-gradient {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8),   /* Darker/thicker outline */
+               0 0 10px rgba(255, 255, 255, 0.9), /* White glow starts */
+               0 0 18px rgba(255, 255, 255, 0.7),
+               0 0 30px rgba(229, 231, 235, 0.6); /* Light gray outer glow */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+
+/* Glow for Regular Light Text (Not currently used in Hero) */
+.text-glow-white {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5),    /* Subtle dark outline */
+               0 0 10px rgba(255, 255, 255, 0.95),/* Bright white */
+               0 0 18px rgba(255, 255, 255, 0.8),
+               0 0 30px rgba(229, 231, 235, 0.7); /* Light gray, wider spread */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* --- NEW: Glow/Outline for BLACK Text --- */
+.text-glow-black {
+  /* Using multiple small offset white shadows to create a hard outline */
+  text-shadow:
+    /* Sharp white outline */
+    1px  1px 0px rgba(255, 255, 255, 0.95),
+   -1px -1px 0px rgba(255, 255, 255, 0.95),
+    1px -1px 0px rgba(255, 255, 255, 0.95),
+   -1px  1px 0px rgba(255, 255, 255, 0.95),
+    /* Optional: Add a very subtle outer glow in a color if needed */
+    /* 0px  0px 10px rgba(192, 132, 252, 0.4); */ /* e.g., Light purple */
+     0px  0px 8px rgba(255, 255, 255, 0.5); /* Or a softer white glow */
+
+  transition: text-shadow 0.3s ease-in-out;
+}
