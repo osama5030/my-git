@@ -1,9 +1,9 @@
 [build]
-  command = "npm run build"  # أو yarn build
-  publish = "dist"           # تأكد من أن المجلد الناتج عن البناء هو "dist"
+  command = "npm run build"  
+  publish = "dist"           
 
 [[headers]]
-  # طبق هذه القاعدة على كل ملفات JS
+  
   for = "/*.js"
   [headers.values]
     Content-Type = "application/javascript"
